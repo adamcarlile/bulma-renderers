@@ -1,5 +1,5 @@
 module BulmaRenderers
-  module Elements
+  module Components
     class Card
 
       def initialize(context, **options)
@@ -8,7 +8,8 @@ module BulmaRenderers
       end
 
       def header(title, **options)
-        @header = BulmaRenderers::Elements::CardHeader.new(@context, title, options)
+        @header = BulmaRenderers::Elements::Card::Header.new(@context, title, options)
+        nil
       end
 
       def header?
@@ -17,6 +18,7 @@ module BulmaRenderers
 
       def image(image_url, **options)
         @image = BulmaRenderers::Elements::Image.new(@context, image_url, options)
+        nil
       end
 
       def image?
@@ -35,7 +37,7 @@ module BulmaRenderers
 
       def footer(&block)
         return unless block_given?
-        @footer = BulmaRenderers::Elements::CardFooter.new(@context)
+        @footer = BulmaRenderers::Elements::Card::Footer.new(@context)
         yield(@footer)
         nil
       end

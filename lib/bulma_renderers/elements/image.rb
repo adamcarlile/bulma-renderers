@@ -11,7 +11,7 @@ module BulmaRenderers
       def render
         xhtml = Builder::XmlMarkup.new target: out=(''), indent: 2
         xhtml.figure(html_options) do |figure|
-          figure << context.image_tag(image_url, image_options)
+          figure << @context.image_tag(@image_url, image_options)
         end
         out.html_safe
       end
