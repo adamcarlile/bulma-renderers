@@ -13,6 +13,10 @@ module BulmaRenderers
       renderer.render
     end
 
+    def bulma_message(title=nil, **options, &block)
+      BulmaRenderers::Components::Message.new(self, title, options, &block).render
+    end
+
     def bulma_level(**options, &block)
       renderer = BulmaRenderers::Components::Level.new(self, options)
       yield(renderer) if block_given?

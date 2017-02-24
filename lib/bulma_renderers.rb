@@ -16,6 +16,7 @@ require "bulma_renderers/components/card"
 require "bulma_renderers/components/nav"
 require "bulma_renderers/components/media_object"
 require "bulma_renderers/components/level"
+require "bulma_renderers/components/message"
 
 require "bulma_renderers/engine"
 
