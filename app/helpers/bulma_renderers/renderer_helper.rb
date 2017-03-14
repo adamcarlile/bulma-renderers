@@ -33,5 +33,11 @@ module BulmaRenderers
       BulmaRenderers::Elements::Image.new(self, url, options).render
     end
 
+    def bulma_tabs(**options, &block)
+      renderer = BulmaRenderers::Components::Tabs.new(self, options)
+      yield(renderer) if block_given?
+      renderer.render
+    end
+
   end
 end

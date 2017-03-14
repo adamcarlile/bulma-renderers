@@ -36,7 +36,7 @@ module BulmaRenderers
         end
 
         def icon
-          @context.content_tag(:span, @context.fa_icon(@options[:icon]), class: 'icon') if icon?
+          @context.content_tag(:span, @context.fa_icon(@options[:icon]), class: 'icon is-small') if icon?
         end
 
         def active?
